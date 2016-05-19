@@ -1669,6 +1669,8 @@ defmodule Kernel do
   ## Examples
 
       iex> [1, 2, 3] |> Enum.first!() |> put_ok()
+      {:ok, 1}
+      
   """
   @spec put_ok(term) :: tuple
   def put_ok(value) do
@@ -1685,6 +1687,8 @@ defmodule Kernel do
   ## Examples
 
       iex> "Invalid argument" |> put_error()
+      {:error, "Invalid argument"}
+
   """
   @spec put_error(term) :: tuple
   def put_error(value) do
